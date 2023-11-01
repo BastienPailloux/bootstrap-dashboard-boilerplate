@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container-fluid container">
+        <a class="navbar-brand text-white"> Le wagon airbnb </a>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+    <div class="d-flex justify-space-between">
+      <!-- SIDEBAR -->
+      <div class="d-flex flex-column flex-shrink-0 py-3 pe-3 ps-1 bg-light sidebar" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <img id="photosidebar" src="data:image/jpeg;base64,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" alt="Petit chat roux">
+          <span class="fs-4"> Welcome 🤩</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <i class="fa-solid fa-table-columns"></i>
+              Overview
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <i class="fa-solid fa-house"></i>
+              My flat
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <i class="fa-solid fa-book"></i>
+              My booking
+            </a>
+          </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>mdo</strong>
+          </a>
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- END OF SIDEBAR -->
+      <div class="container mt-3">
+        <div class="alert alert-primary" role="alert">
+          Check out your incoming bookings!
+        </div>
+        <h2> Bookings </h2>
+
+        <!-- TABLE -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Email</th>
+              <th scope="col">Apartment</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Garden View Flat</td>
+              <td>Jan, 1st 2023 - Jan, 23rd 2023</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- END OF TABLE -->
+        <h2> Flats </h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Available</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Garden View</td>
+              <td>Toulouse</td>
+              <td>yes</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Sea view</td>
+              <td>Marseille</td>
+              <td>no</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Garden View</td>
+              <td>Castres</td>
+              <td>yes</td>
+            </tr>
+          </tbody>
+      </div>
+    </div>
+  </body>
+
+</html>
